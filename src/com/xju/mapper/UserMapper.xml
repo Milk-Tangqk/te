@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xju.mapper.UserMapper">
+    <insert id="insertInfo" parameterType="com.xju.pojo.Me">
+        INSERT INTO ly(qq, email, username, mess) VALUES(#{qq}, #{email}, #{username}, #{mess})
+    </insert>
+    <select id="selectAll" resultType="com.xju.pojo.Me">
+        SELECT * FROM ly
+    </select>
+</mapper>
